@@ -1,0 +1,1479 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020617" />
+    <meta
+      name="description"
+      content="Portofolio Gendri Raditia Alkindi, lulusan Manajemen Informatika dengan minat pada pengembangan web dan mobile."
+    />
+
+    <title>Gendri Raditia Alkindi - Portofolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              dark: "#0f172a",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --dark-gray: #1f1f1f;
+        --dark-gray-2: #2a2a2a;
+        --dark-gray-3: #111111;
+        --yellow-vivid: #ffd400;
+        --yellow-soft: #ffe66d;
+        --yellow-muted: #f7d95c;
+        --text: #f5f5f5;
+        --muted: #d4d4d4;
+        --bg-base: #121212;
+        --bg-panel: rgba(34, 34, 34, 0.82);
+        --bg-panel-strong: rgba(26, 26, 26, 0.96);
+        --border-soft: rgba(255, 212, 0, 0.16);
+        --border-strong: rgba(255, 214, 51, 0.42);
+        --primary: var(--yellow-vivid);
+        --primary-strong: #ffca1b;
+        --accent: #ffdf5c;
+        --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.45);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(255, 212, 0, 0.12), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(255, 212, 0, 0.08), transparent 28%),
+          var(--bg-base);
+        color: var(--text);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 212, 0, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 212, 0, 0.025) 1px, transparent 1px);
+        background-size: 28px 28px;
+        mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      a,
+      button {
+        transition: all 0.24s ease;
+      }
+
+      .bg-slate-950,
+      .bg-slate-900,
+      .bg-slate-800,
+      .bg-slate-700,
+      .bg-slate-900\/80,
+      .bg-slate-900\/70,
+      .bg-slate-900\/60,
+      .bg-slate-950\/50,
+      .bg-slate-950\/95 {
+        background-color: var(--bg-panel) !important;
+      }
+
+      .bg-slate-800 {
+        background-color: rgba(52, 52, 52, 0.92) !important;
+      }
+
+      .bg-slate-700 {
+        background-color: rgba(63, 63, 63, 0.92) !important;
+      }
+
+      .bg-slate-950 {
+        background-color: var(--dark-gray-3) !important;
+      }
+
+      .border-slate-900,
+      .border-slate-800,
+      .border-slate-700,
+      .border-slate-600,
+      .border-slate-800\/70,
+      .border-slate-800\/80 {
+        border-color: rgba(255, 212, 0, 0.12) !important;
+      }
+
+      .text-slate-100,
+      .text-slate-200,
+      .text-slate-300,
+      .text-slate-400,
+      .text-slate-500,
+      .text-slate-600 {
+        color: var(--text) !important;
+      }
+
+      .text-slate-400,
+      .text-slate-500 {
+        color: var(--muted) !important;
+      }
+
+      .hero-name {
+        color: transparent !important;
+        background-image: linear-gradient(135deg, var(--yellow-vivid), var(--yellow-soft));
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      .hero-button-primary {
+        color: #111111 !important;
+        background: linear-gradient(135deg, var(--yellow-vivid), var(--yellow-soft)) !important;
+        border-color: rgba(255, 212, 0, 0.7) !important;
+        box-shadow: 0 18px 35px rgba(255, 212, 0, 0.25) !important;
+      }
+
+      .hero-button-primary:hover {
+        filter: brightness(1.04);
+        transform: translateY(-2px);
+      }
+
+      .section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1rem;
+        border-radius: 9999px;
+        background: rgba(255, 212, 0, 0.08);
+        border: 1px solid rgba(255, 212, 0, 0.18);
+        color: var(--yellow-soft);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .section-tag::before {
+        content: "";
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, var(--yellow-soft), var(--yellow-vivid));
+        box-shadow: 0 0 18px rgba(255, 212, 0, 0.8);
+      }
+
+      .glass-card {
+        background: rgba(34, 34, 34, 0.78);
+        border: 1px solid rgba(255, 212, 0, 0.12);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(12px);
+      }
+
+      .section-shell {
+        position: relative;
+      }
+
+      .section-shell::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 2rem;
+        background: linear-gradient(135deg, rgba(31, 31, 31, 0.9), rgba(17, 17, 17, 0.82));
+        border: 1px solid rgba(255, 212, 0, 0.08);
+        box-shadow: var(--shadow-soft);
+        z-index: -1;
+      }
+
+      .stat-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(96, 165, 250, 0.25);
+        background: rgba(15, 23, 42, 0.72);
+        padding: 0.55rem 0.9rem;
+        color: #cbd5e1;
+        font-size: 0.8rem;
+        font-weight: 600;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
+      }
+
+      .stat-pill i {
+        color: #7dd3fc;
+      }
+
+      .project-gallery {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+        overscroll-behavior-x: contain;
+        cursor: grab;
+        touch-action: pan-y;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      .project-gallery::-webkit-scrollbar {
+        display: none;
+      }
+
+      .project-gallery.dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+      }
+
+      .project-image {
+        display: block;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 224px;
+        object-fit: cover;
+        object-position: top;
+        scroll-snap-align: start;
+        pointer-events: none;
+      }
+
+      .gallery-button {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 9999px;
+        background: rgba(15, 23, 42, 0.82);
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(2, 6, 23, 0.45);
+      }
+
+      .gallery-button:hover {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-color: rgba(96, 165, 250, 0.5);
+      }
+
+      @media (min-width: 768px) {
+        .gallery-button {
+          opacity: 0;
+        }
+
+        .gallery-wrapper:hover .gallery-button,
+        .gallery-wrapper:focus-within .gallery-button {
+          opacity: 1;
+        }
+      }
+
+      .gallery-counter {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        z-index: 10;
+        padding: 5px 10px;
+        border-radius: 9999px;
+        background: rgba(2, 6, 23, 0.8);
+        backdrop-filter: blur(8px);
+        color: white;
+        font-size: 12px;
+        pointer-events: none;
+        border: 1px solid rgba(148, 163, 184, 0.18);
+      }
+
+      .floating-orb {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(80px);
+        opacity: 0.35;
+        pointer-events: none;
+      }
+
+      .skill-card,
+      .project-card,
+      .timeline-card,
+      .contact-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .skill-card::after,
+      .project-card::after,
+      .timeline-card::after,
+      .contact-card::after {
+        content: "";
+        position: absolute;
+        inset: auto -30% -55% auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(96, 165, 250, 0.2), transparent 60%);
+        pointer-events: none;
+      }
+
+      @media (max-width: 767px) {
+        .section-shell::before {
+          border-radius: 1.5rem;
+        }
+      }
+
+      section[id] {
+        scroll-margin-top: 80px;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white"
+  >
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/70 bg-slate-950/70 backdrop-blur-xl shadow-[0_10px_30px_rgba(15,23,42,0.25)]"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a
+            href="#home"
+            class="font-bold text-lg sm:text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400"
+          >
+            Gendri Raditia Alkindi
+          </a>
+
+          <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="#about" class="text-slate-300 hover:text-blue-300 transition">Tentang</a>
+            <a href="#skills" class="text-slate-300 hover:text-blue-300 transition">Keahlian</a>
+            <a href="#experience" class="text-slate-300 hover:text-blue-300 transition">Pengalaman</a>
+            <a href="#projects" class="text-slate-300 hover:text-blue-300 transition">Proyek</a>
+            <a href="#contact" class="text-slate-300 hover:text-blue-300 transition">Kontak</a>
+          </nav>
+
+          <button
+            id="menu-btn"
+            type="button"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-200 hover:border-blue-400 hover:text-white focus:outline-none"
+          >
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE NAVIGATION -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-3 pb-4 space-y-2"
+      >
+        <a href="#about" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Tentang</a>
+        <a href="#skills" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Keahlian</a>
+        <a href="#experience" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Pengalaman</a>
+        <a href="#projects" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Proyek</a>
+        <a href="#contact" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Kontak</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section
+        id="home"
+        class="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      >
+        <div class="floating-orb left-8 top-20 h-40 w-40 bg-blue-500/20"></div>
+        <div class="floating-orb right-10 top-28 h-56 w-56 bg-indigo-500/20"></div>
+        <div class="floating-orb bottom-16 left-1/2 h-52 w-52 bg-cyan-400/10"></div>
+
+        <div
+          class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_60%,transparent_100%)] opacity-20"
+        ></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+          <div class="inline-flex items-center gap-2 mb-7 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-200">
+            <span class="inline-block h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_20px_rgba(52,211,153,0.9)]"></span>
+            Selamat Datang di Portofolio Saya
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-[-0.04em] leading-[1.08] mb-6">
+            Halo, Saya
+            <span class="hero-name block">
+              Gendri Raditia Alkindi
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Lulusan Manajemen Informatika yang tertarik pada pengembangan
+            aplikasi berbasis web dan mobile, perancangan sistem informasi,
+            serta teknologi untuk menyelesaikan permasalahan sehari-hari.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#projects"
+              class="hero-button-primary w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold shadow-[0_18px_35px_rgba(255,212,0,0.28)] hover:translate-y-[-2px]"
+            >
+              Lihat Proyek
+            </a>
+
+            <a
+              href="#contact"
+              class="w-full sm:w-auto px-7 py-3.5 rounded-xl border border-slate-700 bg-slate-900/60 text-slate-200 font-semibold hover:border-blue-400 hover:text-white hover:bg-slate-800"
+            >
+              Hubungi Saya
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap justify-center gap-3 text-sm text-slate-300">
+            <span class="stat-pill"><i class="fa-solid fa-code"></i> Web Developer</span>
+            <span class="stat-pill"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Enthusiast</span>
+            <span class="stat-pill"><i class="fa-solid fa-diagram-project"></i> Problem Solver</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div>
+            <span class="section-tag mb-6">01. Tentang Saya</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-100">
+              Membangun solusi digital yang fungsional dan menarik.
+            </h2>
+
+            <p class="text-slate-300 leading-relaxed mb-4">
+              Saya merupakan lulusan Manajemen Informatika yang memiliki
+              ketertarikan pada teknologi informasi, pengembangan aplikasi, dan
+              pemanfaatan teknologi dalam berbagai kebutuhan.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed mb-8">
+              Saya memiliki pengalaman mengembangkan proyek web dan mobile,
+              membuat konten digital, serta membantu kegiatan usaha keluarga.
+              Saya senang mempelajari hal baru dan mengembangkan kemampuan
+              melalui pengalaman serta proyek yang dikerjakan.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch gap-4">
+              <div class="glass-card flex-1 p-4 rounded-2xl">
+                <span class="block text-xl sm:text-2xl font-bold text-blue-300 mb-1">Manajemen</span>
+                <span class="text-xs text-slate-400">Informatika</span>
+              </div>
+
+              <div class="glass-card flex-1 p-4 rounded-2xl">
+                <span class="block text-xl sm:text-2xl font-bold text-indigo-300 mb-1">Kreatif</span>
+                <span class="text-xs text-slate-400">Teknologi & Konten</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card p-7 sm:p-8 rounded-3xl relative">
+            <div class="absolute -top-3 right-5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white shadow-lg shadow-blue-500/20">
+              Pendidikan
+            </div>
+
+            <h3 class="text-xl font-bold mb-6 text-slate-100">Latar Belakang Akademik</h3>
+
+            <ul class="space-y-5 text-slate-200">
+              <li class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
+                <div class="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-300">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <strong class="block text-white">Politeknik Negeri Padang</strong>
+                  <p class="text-sm text-slate-400 mt-1">Manajemen Informatika</p>
+                  <p class="text-sm text-slate-500 mt-1">Lulus September 2026</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
+                <div class="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-300">
+                  <i class="fa-solid fa-school"></i>
+                </div>
+                <div>
+                  <strong class="block text-white">SMAN 2 Lubuk Alung</strong>
+                  <p class="text-sm text-slate-400 mt-1">Pendidikan Menengah Atas</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section
+        id="skills"
+        class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
+      >
+        <div class="text-center mb-12">
+          <span class="section-tag mb-6">02. Keahlian</span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
+            Teknologi yang saya kuasai
+          </h2>
+          <p class="text-slate-300 max-w-xl mx-auto">
+            Beberapa teknologi dan perangkat yang pernah saya gunakan dalam
+            pengembangan aplikasi.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-blue-400/40 hover:-translate-y-1">
+            <i class="fa-brands fa-php text-4xl text-blue-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">PHP</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Bahasa Pemrograman</span>
+          </div>
+
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-red-400/40 hover:-translate-y-1">
+            <i class="fa-solid fa-layer-group text-4xl text-red-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">Laravel</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Framework PHP</span>
+          </div>
+
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-emerald-400/40 hover:-translate-y-1">
+            <i class="fa-brands fa-vuejs text-4xl text-emerald-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">Vue.js</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Frontend Framework</span>
+          </div>
+
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-yellow-400/40 hover:-translate-y-1">
+            <i class="fa-brands fa-python text-4xl text-yellow-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">Python</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Programming Language</span>
+          </div>
+
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-yellow-300/40 hover:-translate-y-1">
+            <i class="fa-brands fa-js text-4xl text-yellow-300 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">JavaScript</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Web Development</span>
+          </div>
+
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-indigo-400/40 hover:-translate-y-1">
+            <i class="fa-solid fa-database text-4xl text-indigo-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">MySQL</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Basis Data</span>
+          </div>
+
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-slate-200/40 hover:-translate-y-1">
+            <i class="fa-brands fa-github text-4xl text-slate-200 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">Git & GitHub</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Version Control</span>
+          </div>
+
+          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-sky-400/40 hover:-translate-y-1">
+            <i class="fa-solid fa-mobile-screen text-4xl text-sky-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+            <h3 class="font-semibold text-slate-100">Flutter</h3>
+            <span class="text-xs text-slate-400 mt-1 block">Aplikasi Mobile</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section
+        id="experience"
+        class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+      >
+        <span class="section-tag mb-8">03. Pengalaman</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-slate-100">
+          Jejak pengalaman yang terus berkembang
+        </h2>
+
+        <div class="relative border-l-2 border-slate-800 ml-4 pl-6 space-y-8">
+          <div class="timeline-card glass-card rounded-2xl p-5 relative">
+            <div class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-950"></div>
+
+            <span class="text-xs font-semibold text-blue-300 uppercase tracking-[0.15em]">
+              Februari 2026 – Juni 2026
+            </span>
+
+            <h3 class="text-xl font-bold text-slate-100 mt-2">PT Jagoo IT</h3>
+            <p class="text-sm text-slate-400 mt-1">Magang – Pengembangan Aplikasi</p>
+
+            <p class="text-slate-300 mt-3 leading-relaxed">
+              Terlibat dalam proses pengembangan aplikasi web dengan menggunakan
+              Vue.js dan Flask. Memperoleh pengalaman dalam memahami kebutuhan
+              sistem, pengembangan fitur, serta pengelolaan data aplikasi.
+            </p>
+          </div>
+
+          <div class="timeline-card glass-card rounded-2xl p-5 relative">
+            <div class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"></div>
+
+            <span class="text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]">
+              Pengalaman Proyek
+            </span>
+
+            <h3 class="text-xl font-bold text-slate-100 mt-2">
+              Pengembangan Aplikasi Web & Mobile
+            </h3>
+
+            <p class="text-slate-300 mt-3 leading-relaxed">
+              Mengembangkan proyek aplikasi untuk kebutuhan pengelolaan
+              informasi, transaksi, dan pencatatan data. Terbiasa menggunakan
+              Git dan GitHub untuk membantu pengelolaan kode sumber proyek.
+            </p>
+          </div>
+
+          <div class="timeline-card glass-card rounded-2xl p-5 relative">
+            <div class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"></div>
+
+            <span class="text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]">
+              Konten Digital
+            </span>
+
+            <h3 class="text-xl font-bold text-slate-100 mt-2">
+              AI Affiliate & Content Creator
+            </h3>
+
+            <p class="text-slate-300 mt-3 leading-relaxed">
+              Membuat konten promosi berbantuan AI untuk pemasaran produk
+              digital, serta mempelajari strategi affiliate marketing melalui
+              media sosial.
+            </p>
+
+            <span class="mt-5 inline-block text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]">
+              Usaha Keluarga
+            </span>
+
+            <h3 class="text-xl font-bold text-slate-100 mt-2">
+              Pengelola Toko Kelontong
+            </h3>
+
+            <p class="text-slate-300 mt-3 leading-relaxed">
+              Membantu operasional toko kelontong keluarga, melayani pelanggan,
+              serta mendukung kegiatan penjualan dan pengelolaan barang.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section
+        id="projects"
+        class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
+      >
+        <div class="text-center mb-12">
+          <span class="section-tag mb-6">04. Proyek</span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
+            Proyek unggulan yang pernah saya buat
+          </h2>
+          <p class="text-slate-300 max-w-xl mx-auto">
+            Beberapa proyek yang saya kembangkan untuk menerapkan keterampilan
+            dalam membangun aplikasi web dan sistem informasi.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- PROJECT 1: PERPUSTAKAAN -->
+          <article
+            class="project-card bg-slate-900/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col hover:border-blue-500/60 hover:-translate-y-1 transition duration-300 group"
+          >
+            <!-- GALERI PERPUSTAKAAN -->
+            <div
+              class="gallery-wrapper relative overflow-hidden border-b border-slate-800"
+            >
+              <div
+                id="perpus-gallery"
+                class="project-gallery flex flex-nowrap overflow-x-auto snap-x snap-mandatory"
+              >
+                <img
+                  src="images/perpus1.png"
+                  alt="Screenshot pertama sistem informasi perpustakaan"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/perpus2.png"
+                  alt="Screenshot kedua sistem informasi perpustakaan"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/perpus3.png"
+                  alt="Screenshot ketiga sistem informasi perpustakaan"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+              </div>
+
+              <button
+                type="button"
+                onclick="moveGallery('perpus-gallery', -1)"
+                aria-label="Foto perpustakaan sebelumnya"
+                class="gallery-button left-3"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <button
+                type="button"
+                onclick="moveGallery('perpus-gallery', 1)"
+                aria-label="Foto perpustakaan berikutnya"
+                class="gallery-button right-3"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+
+              <span id="perpus-counter" class="gallery-counter">1 / 3</span>
+            </div>
+
+            <div class="p-6 flex-1">
+              <div class="flex items-center justify-between mb-5">
+                <i class="fa-solid fa-book-open text-3xl text-blue-500"></i>
+
+                <div class="flex flex-wrap justify-end gap-2">
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                    >Laravel</span
+                  >
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+
+              <h3
+                class="text-xl font-bold text-slate-100 mb-3 group-hover:text-blue-400 transition"
+              >
+                Sistem Informasi Manajemen Perpustakaan
+              </h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed mb-5">
+                Aplikasi berbasis web untuk membantu pengelolaan data buku,
+                anggota, peminjaman, dan pengembalian buku. Dilengkapi QR Code
+                untuk identifikasi buku dan anggota serta modul hibah buku untuk
+                pencatatan donasi.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                  >Eloquent ORM</span
+                >
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                  >QR Code</span
+                >
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                  >Sistem Informasi</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="px-6 py-4 bg-slate-950/50 border-t border-slate-800 flex items-center justify-between gap-3"
+            >
+              <span class="text-xs text-slate-500">Tugas Akhir · 2026</span>
+
+              <a
+                href="https://github.com/gend-raditya/perpus-sdn32"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-medium text-blue-400 hover:text-blue-300 flex items-center gap-2"
+              >
+                <i class="fa-brands fa-github"></i>
+                GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: STAR UMKM -->
+          <article
+            class="project-card bg-slate-900/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col hover:border-indigo-500/60 hover:-translate-y-1 transition duration-300 group"
+          >
+            <!-- GALERI SCREENSHOT STAR UMKM -->
+            <div
+              class="gallery-wrapper relative overflow-hidden border-b border-slate-800"
+            >
+              <div
+                id="star-gallery"
+                class="project-gallery flex flex-nowrap overflow-x-auto snap-x snap-mandatory"
+              >
+                <img
+                  src="images/star1.png"
+                  alt="Halaman utama Star UMKM"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/star2.png"
+                  alt="Katalog produk Star UMKM"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/star3.png"
+                  alt="Detail produk Star UMKM"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+              </div>
+
+              <button
+                type="button"
+                onclick="moveGallery('star-gallery', -1)"
+                aria-label="Foto sebelumnya"
+                class="gallery-button left-3"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <button
+                type="button"
+                onclick="moveGallery('star-gallery', 1)"
+                aria-label="Foto berikutnya"
+                class="gallery-button right-3"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+
+              <span id="star-counter" class="gallery-counter">1 / 4</span>
+            </div>
+
+            <div class="p-6 flex-1">
+              <div class="flex items-center justify-between mb-5">
+                <i
+                  class="fa-solid fa-bag-shopping text-3xl text-indigo-400"
+                ></i>
+
+                <div class="flex flex-wrap justify-end gap-2">
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                    >Laravel</span
+                  >
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+
+              <h3
+                class="text-xl font-bold text-slate-100 mb-3 group-hover:text-indigo-400 transition"
+              >
+                Star UMKM — E-Commerce UMKM
+              </h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed mb-5">
+                Aplikasi e-commerce untuk membantu UMKM memasarkan produk
+                oleh-oleh dan kerajinan tangan secara online. Memiliki fitur
+                autentikasi, katalog produk, keranjang belanja, checkout,
+                manajemen pesanan, integrasi pembayaran Midtrans, serta
+                komunikasi melalui WhatsApp.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                  >PHP</span
+                >
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                  >Midtrans API</span
+                >
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="px-6 py-4 bg-slate-950/50 border-t border-slate-800 flex items-center justify-between gap-3"
+            >
+              <span class="text-xs text-slate-500"
+                >Full-stack Web Application</span
+              >
+
+              <a
+                href="https://github.com/gend-raditya/star_umkm"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-2"
+              >
+                <i class="fa-brands fa-github"></i>
+                GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECTION SERTIFIKAT -->
+
+      <section id="sertifikat" class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto">
+          <!-- JUDUL SECTION -->
+          <div class="mb-12">
+            <span class="section-tag mb-6">Pelatihan & Pengembangan</span>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">
+              Sertifikat
+            </h2>
+
+            <p class="text-slate-300 mt-4 max-w-2xl leading-relaxed">
+              Sertifikat pelatihan dan penghargaan sebagai bukti pengembangan
+              keterampilan di berbagai bidang.
+            </p>
+          </div>
+
+          <!-- DAFTAR SERTIFIKAT -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <!-- SERTIFIKAT JAVA -->
+            <article
+              class="project-card h-full flex flex-col bg-slate-900/75 border border-slate-800 rounded-3xl overflow-hidden hover:border-indigo-500/60 transition duration-300"
+            >
+              <!-- GAMBAR SERTIFIKAT -->
+              <button
+                type="button"
+                class="certificate-image-link relative w-full h-64 sm:h-72 bg-slate-950 p-4 flex items-center justify-center cursor-zoom-in group"
+                data-image="images/sertifikat-java.png"
+                data-alt="Sertifikat Java Fundamentals dan Java Programming"
+                aria-label="Perbesar sertifikat Java"
+              >
+                <img
+                  src="images/sertifikat-java.png"
+                  alt="Sertifikat Java Fundamentals dan Java Programming"
+                  class="w-full h-full object-contain transition duration-300 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+
+                <span
+                  class="absolute bottom-3 right-3 rounded-lg bg-slate-900/90 border border-slate-700 px-3 py-2 text-xs text-slate-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>
+                  Perbesar
+                </span>
+              </button>
+
+              <!-- INFORMASI SERTIFIKAT -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider"
+                >
+                  Digital Talent Scholarship 2024
+                </span>
+
+                <h3 class="text-xl font-bold text-slate-100 mt-3">
+                  Java Fundamentals & Java Programming
+                </h3>
+
+                <p class="text-sm text-indigo-400 mt-2">
+                  KOMINFO & Oracle Academy
+                </p>
+
+                <p class="text-sm text-slate-500 mt-2">
+                  19 Februari – 14 Juli 2024
+                </p>
+
+                <p class="text-slate-400 text-sm leading-relaxed mt-4">
+                  Menyelesaikan pelatihan pemrograman Java yang mencakup konsep
+                  dasar Java dan keterampilan menulis kode.
+                </p>
+
+                <div class="mt-auto pt-6">
+                  <div
+                    class="border-t border-slate-800 pt-4 text-xs text-slate-500"
+                  >
+                    <i class="fa-solid fa-award mr-1 text-indigo-400"></i>
+                    Sertifikat Pelatihan
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SERTIFIKAT AWS -->
+            <article
+              class="project-card h-full flex flex-col bg-slate-900/75 border border-slate-800 rounded-3xl overflow-hidden hover:border-indigo-500/60 transition duration-300"
+            >
+              <!-- GAMBAR SERTIFIKAT -->
+              <button
+                type="button"
+                class="certificate-image-link relative w-full h-64 sm:h-72 bg-slate-950 p-4 flex items-center justify-center cursor-zoom-in group"
+                data-image="images/sertifikat-aws.png"
+                data-alt="Sertifikat AWS Academy Cloud Operations"
+                aria-label="Perbesar sertifikat AWS"
+              >
+                <img
+                  src="images/sertifikat-aws.png"
+                  alt="Sertifikat AWS Academy Cloud Operations"
+                  class="w-full h-full object-contain transition duration-300 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+
+                <span
+                  class="absolute bottom-3 right-3 rounded-lg bg-slate-900/90 border border-slate-700 px-3 py-2 text-xs text-slate-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>
+                  Perbesar
+                </span>
+              </button>
+
+              <!-- INFORMASI SERTIFIKAT -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider"
+                >
+                  AWS Academy
+                </span>
+
+                <h3 class="text-xl font-bold text-slate-100 mt-3">
+                  AWS Academy Cloud Operations
+                </h3>
+
+                <p class="text-sm text-indigo-400 mt-2">AWS Academy Graduate</p>
+
+                <p class="text-sm text-slate-500 mt-2">
+                  Diterbitkan 6 April 2025 · 40 jam pelatihan
+                </p>
+
+                <p class="text-slate-400 text-sm leading-relaxed mt-4">
+                  Mempelajari dasar-dasar pengelolaan, pemantauan, dan keamanan
+                  sistem cloud menggunakan Amazon Web Services (AWS).
+                </p>
+
+                <div class="mt-auto pt-6">
+                  <div
+                    class="border-t border-slate-800 pt-4 text-xs text-slate-500"
+                  >
+                    <i class="fa-solid fa-award mr-1 text-indigo-400"></i>
+                    Sertifikat Pelatihan
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SERTIFIKAT ALFALFA ENGLISH -->
+            <article
+              class="project-card h-full flex flex-col bg-slate-900/75 border border-slate-800 rounded-3xl overflow-hidden hover:border-indigo-500/60 transition duration-300"
+            >
+              <!-- GAMBAR SERTIFIKAT -->
+              <button
+                type="button"
+                class="certificate-image-link relative w-full h-64 sm:h-72 bg-slate-950 p-4 flex items-center justify-center cursor-zoom-in group"
+                data-image="images/sertifikat-alfalfa.png"
+                data-alt="Sertifikat Good Basic Grammar for Speaking"
+                aria-label="Perbesar sertifikat Alfalfa Fun English"
+              >
+                <img
+                  src="images/sertifikat-alfalfa.png"
+                  alt="Sertifikat Good Basic Grammar for Speaking"
+                  class="w-full h-full object-contain transition duration-300 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+
+                <span
+                  class="absolute bottom-3 right-3 rounded-lg bg-slate-900/90 border border-slate-700 px-3 py-2 text-xs text-slate-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>
+                  Perbesar
+                </span>
+              </button>
+
+              <!-- INFORMASI SERTIFIKAT -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider"
+                >
+                  Alfalfa Fun English Classes
+                </span>
+
+                <h3 class="text-xl font-bold text-slate-100 mt-3">
+                  Good Basic Grammar for Speaking
+                </h3>
+
+                <p class="text-sm text-indigo-400 mt-2">Alfalfa English Club</p>
+
+                <p class="text-sm text-slate-500 mt-2">Juni 2023</p>
+
+                <p class="text-slate-400 text-sm leading-relaxed mt-4">
+                  Menyelesaikan program tata bahasa dasar untuk percakapan guna
+                  meningkatkan kemampuan berbicara bahasa Inggris dengan lebih
+                  jelas dan benar.
+                </p>
+
+                <div class="mt-auto pt-6">
+                  <div
+                    class="border-t border-slate-800 pt-4 text-xs text-slate-500"
+                  >
+                    <i class="fa-solid fa-award mr-1 text-indigo-400"></i>
+                    Sertifikat Kursus Bahasa
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- SERTIFIKAT FLS2N -->
+            <article
+              class="project-card h-full flex flex-col bg-slate-900/75 border border-slate-800 rounded-3xl overflow-hidden hover:border-indigo-500/60 transition duration-300"
+            >
+              <!-- GAMBAR SERTIFIKAT -->
+              <button
+                type="button"
+                class="certificate-image-link relative w-full h-64 sm:h-72 bg-slate-950 p-4 flex items-center justify-center cursor-zoom-in group"
+                data-image="images/sertifikat-fls2n.png"
+                data-alt="Piagam Penghargaan FLS2N Dinas Pendidikan Provinsi Sumatera Barat"
+                aria-label="Perbesar piagam FLS2N"
+              >
+                <img
+                  src="images/sertifikat-fls2n.png"
+                  alt="Piagam Penghargaan FLS2N Dinas Pendidikan Provinsi Sumatera Barat"
+                  class="w-full h-full object-contain transition duration-300 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+
+                <span
+                  class="absolute bottom-3 right-3 rounded-lg bg-slate-900/90 border border-slate-700 px-3 py-2 text-xs text-slate-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>
+                  Perbesar
+                </span>
+              </button>
+
+              <!-- INFORMASI SERTIFIKAT -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span
+                  class="text-xs font-semibold text-slate-400 uppercase tracking-wider"
+                >
+                  Dinas Pendidikan Provinsi Sumatera Barat
+                </span>
+
+                <h3 class="text-xl font-bold text-slate-100 mt-3">
+                  FLS2N (Festival Lomba Seni Siswa Nasional)
+                </h3>
+
+                <p class="text-sm text-indigo-400 mt-2">
+                  Peserta Cabang Gitar Duet (SMP)
+                </p>
+
+                <p class="text-sm text-slate-500 mt-2">
+                  30 Juli – 2 Agustus 2019
+                </p>
+
+                <p class="text-slate-400 text-sm leading-relaxed mt-4">
+                  Berpartisipasi mewakili SMP Negeri 1 Lubuk Alung dalam
+                  kompetisi seni tingkat provinsi di Padang untuk kategori Gitar
+                  Duet.
+                </p>
+
+                <div class="mt-auto pt-6">
+                  <div
+                    class="border-t border-slate-800 pt-4 text-xs text-slate-500"
+                  >
+                    <i class="fa-solid fa-award mr-1 text-indigo-400"></i>
+                    Piagam Penghargaan
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIGHTBOX SERTIFIKAT -->
+      <div
+        id="certificate-lightbox"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-8"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Pratinjau sertifikat"
+      >
+        <!-- TOMBOL TUTUP -->
+        <button
+          type="button"
+          id="certificate-lightbox-close"
+          class="absolute top-4 right-4 sm:top-6 sm:right-6 z-10 w-11 h-11 flex items-center justify-center rounded-full bg-slate-800/90 border border-slate-600 text-white text-2xl hover:bg-red-600 hover:border-red-500 transition"
+          aria-label="Tutup gambar sertifikat"
+        >
+          &times;
+        </button>
+
+        <!-- GAMBAR UKURAN PENUH -->
+        <img
+          id="certificate-lightbox-image"
+          src=""
+          alt=""
+          class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+        />
+      </div>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center"
+      >
+        <span class="section-tag mb-6">05. Kontak</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
+          Hubungi Saya
+        </h2>
+
+        <p class="text-slate-300 mb-8 max-w-lg mx-auto leading-relaxed">
+          Saya terbuka untuk kesempatan kerja, kolaborasi, dan diskusi
+          profesional. Silakan hubungi saya melalui tautan berikut.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="mailto:gendriraditya9@gmail.com"
+            class="contact-card px-6 py-3 rounded-2xl border border-slate-700 bg-slate-900/70 text-slate-200 hover:border-blue-400 hover:text-white hover:bg-slate-800/80 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-envelope text-blue-400"></i>
+            Email
+          </a>
+
+          <a
+            href="https://github.com/gend-raditya"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card px-6 py-3 rounded-2xl border border-slate-700 bg-slate-900/70 text-slate-200 hover:border-blue-400 hover:text-white hover:bg-slate-800/80 flex items-center gap-2"
+          >
+            <i class="fa-brands fa-github text-blue-400"></i>
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com/in/gendri-raditya"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card px-6 py-3 rounded-2xl border border-slate-700 bg-slate-900/70 text-slate-200 hover:border-blue-400 hover:text-white hover:bg-slate-800/80 flex items-center gap-2"
+          >
+            <i class="fa-brands fa-linkedin text-blue-400"></i>
+            LinkedIn
+          </a>
+
+          <a
+            href="https://instagram.com/gendri_raditia"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card px-6 py-3 rounded-2xl border border-slate-700 bg-slate-900/70 text-slate-200 hover:border-blue-400 hover:text-white hover:bg-slate-800/80 flex items-center gap-2"
+          >
+            <i class="fa-brands fa-instagram text-blue-400"></i>
+            Instagram
+          </a>
+
+          <a
+            href="https://wa.me/6281267797130"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card px-6 py-3 rounded-2xl border border-slate-700 bg-slate-900/70 text-slate-200 hover:border-blue-400 hover:text-white hover:bg-slate-800/80 flex items-center gap-2"
+          >
+            <i class="fa-brands fa-whatsapp text-blue-400"></i>
+            WhatsApp
+          </a>
+
+          <a
+            href="https://gendriraditya.blogspot.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card px-6 py-3 rounded-2xl border border-slate-700 bg-slate-900/70 text-slate-200 hover:border-blue-400 hover:text-white hover:bg-slate-800/80 flex items-center gap-2"
+          >
+            <i class="fa-solid fa-blog text-blue-400"></i>
+            Blog
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="py-8 border-t border-slate-900 text-center text-sm text-slate-500 px-4"
+    >
+      <p>&copy; 2026 Gendri Raditia Alkindi. Dibuat dengan Tailwind CSS.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      // Mobile navigation
+      const menuButton = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuButton.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.toggle("hidden");
+
+        menuButton.setAttribute("aria-expanded", String(!isHidden));
+        menuButton.innerHTML = isHidden
+          ? '<i class="fa-solid fa-bars text-xl"></i>'
+          : '<i class="fa-solid fa-xmark text-xl"></i>';
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+        });
+      });
+
+      // Carousel navigation
+      function moveGallery(galleryId, direction) {
+        const gallery = document.getElementById(galleryId);
+        if (!gallery) return;
+
+        const images = gallery.querySelectorAll(".project-image");
+        if (!images.length) return;
+
+        const currentIndex = Math.round(
+          gallery.scrollLeft / gallery.clientWidth,
+        );
+
+        const nextIndex =
+          (currentIndex + direction + images.length) % images.length;
+
+        gallery.scrollTo({
+          left: nextIndex * gallery.clientWidth,
+          behavior: "smooth",
+        });
+      }
+
+      // Update image counter
+      document.querySelectorAll(".project-gallery").forEach((gallery) => {
+        const counterId =
+          gallery.id === "perpus-gallery" ? "perpus-counter" : "star-counter";
+
+        const counter = document.getElementById(counterId);
+
+        function updateCounter() {
+          if (!counter || !gallery.clientWidth) return;
+
+          const images = gallery.querySelectorAll(".project-image");
+          const index = Math.round(gallery.scrollLeft / gallery.clientWidth);
+
+          counter.textContent = `${Math.min(index + 1, images.length)} / ${images.length}`;
+        }
+
+        gallery.addEventListener("scroll", updateCounter);
+        window.addEventListener("resize", updateCounter);
+        updateCounter();
+      });
+
+      // Mouse drag support for desktop
+      document.querySelectorAll(".project-gallery").forEach((gallery) => {
+        let isDragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+
+        gallery.addEventListener("mousedown", (event) => {
+          if (event.button !== 0) return;
+
+          isDragging = true;
+          startX = event.clientX;
+          startScrollLeft = gallery.scrollLeft;
+          gallery.classList.add("dragging");
+        });
+
+        window.addEventListener("mousemove", (event) => {
+          if (!isDragging) return;
+
+          event.preventDefault();
+          gallery.scrollLeft = startScrollLeft - (event.clientX - startX);
+        });
+
+        window.addEventListener("mouseup", () => {
+          isDragging = false;
+          gallery.classList.remove("dragging");
+        });
+
+        gallery.addEventListener("mouseleave", () => {
+          if (!isDragging) return;
+
+          isDragging = false;
+          gallery.classList.remove("dragging");
+        });
+      });
+      const certificateLightbox = document.getElementById(
+        "certificate-lightbox",
+      );
+
+      const certificateLightboxImage = document.getElementById(
+        "certificate-lightbox-image",
+      );
+
+      const certificateLightboxClose = document.getElementById(
+        "certificate-lightbox-close",
+      );
+
+      // Membuka gambar sertifikat
+      document.querySelectorAll(".certificate-image-link").forEach((button) => {
+        button.addEventListener("click", () => {
+          certificateLightboxImage.src = button.dataset.image;
+          certificateLightboxImage.alt = button.dataset.alt || "Sertifikat";
+
+          certificateLightbox.classList.remove("hidden");
+          certificateLightbox.classList.add("flex");
+
+          document.body.style.overflow = "hidden";
+          certificateLightboxClose.focus();
+        });
+      });
+
+      // Menutup gambar sertifikat
+      function closeCertificateLightbox() {
+        certificateLightbox.classList.add("hidden");
+        certificateLightbox.classList.remove("flex");
+
+        certificateLightboxImage.src = "";
+        document.body.style.overflow = "";
+      }
+
+      certificateLightboxClose.addEventListener(
+        "click",
+        closeCertificateLightbox,
+      );
+
+      // Menutup saat area gelap di luar gambar diklik
+      certificateLightbox.addEventListener("click", (event) => {
+        if (event.target === certificateLightbox) {
+          closeCertificateLightbox();
+        }
+      });
+
+      // Menutup dengan tombol Escape
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "Escape" &&
+          !certificateLightbox.classList.contains("hidden")
+        ) {
+          closeCertificateLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>
