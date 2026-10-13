@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#020617" />
+    <meta name="theme-color" content="#090909" />
     <meta
       name="description"
       content="Portofolio Gendri Raditia Alkindi, lulusan Manajemen Informatika dengan minat pada pengembangan web dan mobile."
@@ -18,8 +18,8 @@
         theme: {
           extend: {
             colors: {
-              primary: "#3b82f6",
-              dark: "#0f172a",
+              primary: "#f5f5f5",
+              dark: "#090909",
             },
           },
         },
@@ -40,23 +40,23 @@
 
     <style>
       :root {
-        --dark-gray: #1f1f1f;
-        --dark-gray-2: #2a2a2a;
-        --dark-gray-3: #111111;
-        --yellow-vivid: #ffd400;
-        --yellow-soft: #ffe66d;
-        --yellow-muted: #f7d95c;
+        --dark-gray: #0a0a0a;
+        --dark-gray-2: #171717;
+        --dark-gray-3: #050505;
+        --white-vivid: #f5f5f5;
+        --white-soft: #e5e5e5;
+        --white-muted: #d4d4d4;
         --text: #f5f5f5;
         --muted: #d4d4d4;
-        --bg-base: #121212;
-        --bg-panel: rgba(34, 34, 34, 0.82);
-        --bg-panel-strong: rgba(26, 26, 26, 0.96);
-        --border-soft: rgba(255, 212, 0, 0.16);
-        --border-strong: rgba(255, 214, 51, 0.42);
-        --primary: var(--yellow-vivid);
-        --primary-strong: #ffca1b;
-        --accent: #ffdf5c;
-        --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.45);
+        --bg-base: #090909;
+        --bg-panel: rgba(20, 20, 20, 0.82);
+        --bg-panel-strong: rgba(12, 12, 12, 0.96);
+        --border-soft: rgba(255, 255, 255, 0.12);
+        --border-strong: rgba(255, 255, 255, 0.32);
+        --primary: var(--white-vivid);
+        --primary-strong: #ffffff;
+        --accent: #f5f5f5;
+        --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.6);
       }
 
       html {
@@ -65,10 +65,20 @@
 
       body {
         font-family: "Inter", sans-serif;
-        background:
-          radial-gradient(circle at top, rgba(255, 212, 0, 0.12), transparent 30%),
-          radial-gradient(circle at bottom right, rgba(255, 212, 0, 0.08), transparent 28%),
-          var(--bg-base);
+        background-color: #090909 !important;
+        background-image:
+          radial-gradient(
+            circle at top,
+            rgba(255, 255, 255, 0.025),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(255, 255, 255, 0.02),
+            transparent 28%
+          );
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         color: var(--text);
       }
 
@@ -77,12 +87,26 @@
         position: fixed;
         inset: 0;
         background-image:
-          linear-gradient(rgba(255, 212, 0, 0.025) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 212, 0, 0.025) 1px, transparent 1px);
+          linear-gradient(rgba(255, 255, 255, 0.006) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.006) 1px,
+            transparent 1px
+          );
         background-size: 28px 28px;
-        mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+        opacity: 0.7;
+        mask-image: radial-gradient(
+          circle at center,
+          black 30%,
+          transparent 90%
+        );
         pointer-events: none;
         z-index: -1;
+      }
+
+      ::selection {
+        background: rgba(255, 255, 255, 0.85);
+        color: #111111;
       }
 
       a,
@@ -120,7 +144,7 @@
       .border-slate-600,
       .border-slate-800\/70,
       .border-slate-800\/80 {
-        border-color: rgba(255, 212, 0, 0.12) !important;
+        border-color: rgba(255, 255, 255, 0.12) !important;
       }
 
       .text-slate-100,
@@ -129,26 +153,81 @@
       .text-slate-400,
       .text-slate-500,
       .text-slate-600 {
-        color: var(--text) !important;
+        color: #f8fafc !important;
       }
 
       .text-slate-400,
       .text-slate-500 {
-        color: var(--muted) !important;
+        color: #dfe7ee !important;
+      }
+
+      body,
+      main,
+      section,
+      h1,
+      h2,
+      h3,
+      p,
+      span,
+      a,
+      li,
+      strong,
+      label,
+      button {
+        color: #f8fafc;
+      }
+
+      [class*="text-blue-"],
+      [class*="text-indigo-"],
+      [class*="text-cyan-"],
+      [class*="text-emerald-"],
+      [class*="text-violet-"] {
+        color: var(--white-soft) !important;
+      }
+
+      [class*="bg-blue-"],
+      [class*="bg-indigo-"],
+      [class*="bg-cyan-"],
+      [class*="bg-emerald-"],
+      [class*="bg-violet-"] {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+      }
+
+      [class*="border-blue-"],
+      [class*="border-indigo-"],
+      [class*="border-cyan-"],
+      [class*="border-emerald-"],
+      [class*="border-violet-"] {
+        border-color: rgba(255, 255, 255, 0.2) !important;
+      }
+
+      [class*="from-blue-"],
+      [class*="via-cyan-"],
+      [class*="to-indigo-"] {
+        --tw-gradient-from: rgba(255, 255, 255, 0.92) !important;
+        --tw-gradient-to: rgba(255, 255, 255, 0.66) !important;
       }
 
       .hero-name {
         color: transparent !important;
-        background-image: linear-gradient(135deg, var(--yellow-vivid), var(--yellow-soft));
+        background-image: linear-gradient(
+          135deg,
+          var(--white-vivid),
+          var(--white-soft)
+        );
         background-clip: text;
         -webkit-background-clip: text;
       }
 
       .hero-button-primary {
         color: #111111 !important;
-        background: linear-gradient(135deg, var(--yellow-vivid), var(--yellow-soft)) !important;
-        border-color: rgba(255, 212, 0, 0.7) !important;
-        box-shadow: 0 18px 35px rgba(255, 212, 0, 0.25) !important;
+        background: linear-gradient(
+          135deg,
+          var(--white-vivid),
+          var(--white-soft)
+        ) !important;
+        border-color: rgba(255, 255, 255, 0.7) !important;
+        box-shadow: 0 18px 35px rgba(255, 255, 255, 0.18) !important;
       }
 
       .hero-button-primary:hover {
@@ -162,9 +241,9 @@
         gap: 0.5rem;
         padding: 0.6rem 1rem;
         border-radius: 9999px;
-        background: rgba(255, 212, 0, 0.08);
-        border: 1px solid rgba(255, 212, 0, 0.18);
-        color: var(--yellow-soft);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: var(--white-soft);
         font-size: 0.72rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
@@ -176,13 +255,17 @@
         width: 0.5rem;
         height: 0.5rem;
         border-radius: 9999px;
-        background: linear-gradient(135deg, var(--yellow-soft), var(--yellow-vivid));
-        box-shadow: 0 0 18px rgba(255, 212, 0, 0.8);
+        background: linear-gradient(
+          135deg,
+          var(--white-soft),
+          var(--white-vivid)
+        );
+        box-shadow: 0 0 18px rgba(255, 255, 255, 0.7);
       }
 
       .glass-card {
-        background: rgba(34, 34, 34, 0.78);
-        border: 1px solid rgba(255, 212, 0, 0.12);
+        background: rgba(22, 22, 22, 0.78);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
         backdrop-filter: blur(12px);
       }
@@ -196,8 +279,12 @@
         position: absolute;
         inset: 0;
         border-radius: 2rem;
-        background: linear-gradient(135deg, rgba(31, 31, 31, 0.9), rgba(17, 17, 17, 0.82));
-        border: 1px solid rgba(255, 212, 0, 0.08);
+        background: linear-gradient(
+          135deg,
+          rgba(31, 31, 31, 0.9),
+          rgba(12, 12, 12, 0.82)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow: var(--shadow-soft);
         z-index: -1;
       }
@@ -207,17 +294,17 @@
         align-items: center;
         gap: 0.5rem;
         border-radius: 9999px;
-        border: 1px solid rgba(96, 165, 250, 0.25);
-        background: rgba(15, 23, 42, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.05);
         padding: 0.55rem 0.9rem;
-        color: #cbd5e1;
+        color: #f5f5f5;
         font-size: 0.8rem;
         font-weight: 600;
-        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
       }
 
       .stat-pill i {
-        color: #7dd3fc;
+        color: var(--white-soft);
       }
 
       .project-gallery {
@@ -327,7 +414,11 @@
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(96, 165, 250, 0.2), transparent 60%);
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.12),
+          transparent 60%
+        );
         pointer-events: none;
       }
 
@@ -344,11 +435,31 @@
   </head>
 
   <body
-    class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white"
+    class="bg-black text-slate-100 antialiased selection:bg-blue-500 selection:text-white"
+    style="
+      background: #000000 !important;
+      background-image:
+        radial-gradient(
+          circle at top,
+          rgba(255, 255, 255, 0.02),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(255, 255, 255, 0.02),
+          transparent 28%
+        ) !important;
+      color: #f5f5f5 !important;
+    "
   >
     <!-- NAVBAR -->
     <header
-      class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/70 bg-slate-950/70 backdrop-blur-xl shadow-[0_10px_30px_rgba(15,23,42,0.25)]"
+      class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/70 bg-black/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(15,23,42,0.25)]"
+      style="
+        background: rgba(8, 8, 8, 0.82) !important;
+        border-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(18px);
+      "
     >
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
@@ -360,11 +471,31 @@
           </a>
 
           <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a href="#about" class="text-slate-300 hover:text-blue-300 transition">Tentang</a>
-            <a href="#skills" class="text-slate-300 hover:text-blue-300 transition">Keahlian</a>
-            <a href="#experience" class="text-slate-300 hover:text-blue-300 transition">Pengalaman</a>
-            <a href="#projects" class="text-slate-300 hover:text-blue-300 transition">Proyek</a>
-            <a href="#contact" class="text-slate-300 hover:text-blue-300 transition">Kontak</a>
+            <a
+              href="#about"
+              class="text-slate-300 hover:text-blue-300 transition"
+              >Tentang</a
+            >
+            <a
+              href="#skills"
+              class="text-slate-300 hover:text-blue-300 transition"
+              >Keahlian</a
+            >
+            <a
+              href="#experience"
+              class="text-slate-300 hover:text-blue-300 transition"
+              >Pengalaman</a
+            >
+            <a
+              href="#projects"
+              class="text-slate-300 hover:text-blue-300 transition"
+              >Proyek</a
+            >
+            <a
+              href="#contact"
+              class="text-slate-300 hover:text-blue-300 transition"
+              >Kontak</a
+            >
           </nav>
 
           <button
@@ -385,11 +516,31 @@
         id="mobile-menu"
         class="hidden md:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-3 pb-4 space-y-2"
       >
-        <a href="#about" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Tentang</a>
-        <a href="#skills" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Keahlian</a>
-        <a href="#experience" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Pengalaman</a>
-        <a href="#projects" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Proyek</a>
-        <a href="#contact" class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300">Kontak</a>
+        <a
+          href="#about"
+          class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300"
+          >Tentang</a
+        >
+        <a
+          href="#skills"
+          class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300"
+          >Keahlian</a
+        >
+        <a
+          href="#experience"
+          class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300"
+          >Pengalaman</a
+        >
+        <a
+          href="#projects"
+          class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300"
+          >Proyek</a
+        >
+        <a
+          href="#contact"
+          class="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-blue-300"
+          >Kontak</a
+        >
       </div>
     </header>
 
@@ -400,33 +551,36 @@
         class="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
       >
         <div class="floating-orb left-8 top-20 h-40 w-40 bg-blue-500/20"></div>
-        <div class="floating-orb right-10 top-28 h-56 w-56 bg-indigo-500/20"></div>
-        <div class="floating-orb bottom-16 left-1/2 h-52 w-52 bg-cyan-400/10"></div>
+        <div
+          class="floating-orb right-10 top-28 h-56 w-56 bg-indigo-500/20"
+        ></div>
+        <div
+          class="floating-orb bottom-16 left-1/2 h-52 w-52 bg-cyan-400/10"
+        ></div>
 
         <div
-          class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_60%,transparent_100%)] opacity-20"
+          class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_60%,transparent_100%)] opacity-10"
         ></div>
 
         <div class="max-w-4xl mx-auto text-center relative z-10">
-          <div class="inline-flex items-center gap-2 mb-7 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-200">
-            <span class="inline-block h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_20px_rgba(52,211,153,0.9)]"></span>
-            Selamat Datang di Portofolio Saya
+          <div
+            class="inline-flex items-center gap-2 mb-7 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-200"
+          >
+            <span
+              class="inline-block h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_20px_rgba(52,211,153,0.9)]"
+            ></span>
+            Selamat Datang di Portfolio
           </div>
 
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-[-0.04em] leading-[1.08] mb-6">
-            Halo, Saya
-            <span class="hero-name block">
-              Gendri Raditia Alkindi
-            </span>
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl font-black tracking-[-0.04em] leading-[1.08] mb-6"
+          >
+            <span class="hero-name block"> Gendri Raditia Alkindi </span>
           </h1>
 
-          <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Lulusan Manajemen Informatika yang tertarik pada pengembangan
-            aplikasi berbasis web dan mobile, perancangan sistem informasi,
-            serta teknologi untuk menyelesaikan permasalahan sehari-hari.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
             <a
               href="#projects"
               class="hero-button-primary w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold shadow-[0_18px_35px_rgba(255,212,0,0.28)] hover:translate-y-[-2px]"
@@ -442,10 +596,23 @@
             </a>
           </div>
 
-          <div class="mt-10 flex flex-wrap justify-center gap-3 text-sm text-slate-300">
-            <span class="stat-pill"><i class="fa-solid fa-code"></i> Web Developer</span>
-            <span class="stat-pill"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Enthusiast</span>
-            <span class="stat-pill"><i class="fa-solid fa-diagram-project"></i> Problem Solver</span>
+          <div
+            class="mt-10 flex flex-wrap justify-center gap-3 text-sm text-slate-300"
+          >
+            <span class="stat-pill">
+              <i class="fa-solid fa-code"></i>
+              Web &amp; Mobile Development
+            </span>
+
+            <span class="stat-pill">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              AI Content Creator
+            </span>
+
+            <span class="stat-pill">
+              <i class="fa-solid fa-lightbulb"></i>
+              Problem Solver
+            </span>
           </div>
         </div>
       </section>
@@ -455,65 +622,94 @@
         id="about"
         class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
       >
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-center"
+        >
           <div>
             <span class="section-tag mb-6">01. Tentang Saya</span>
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-100">
-              Membangun solusi digital yang fungsional dan menarik.
+              Terus berkembang, beradaptasi, dan menciptakan peluang.
             </h2>
 
             <p class="text-slate-300 leading-relaxed mb-4">
-              Saya merupakan lulusan Manajemen Informatika yang memiliki
-              ketertarikan pada teknologi informasi, pengembangan aplikasi, dan
-              pemanfaatan teknologi dalam berbagai kebutuhan.
+              Lulusan Manajemen Informatika dari Politeknik Negeri Padang dengan
+              minat pada teknologi, kreativitas digital, dan pengembangan
+              kemampuan diri.
             </p>
 
             <p class="text-slate-300 leading-relaxed mb-8">
-              Saya memiliki pengalaman mengembangkan proyek web dan mobile,
-              membuat konten digital, serta membantu kegiatan usaha keluarga.
-              Saya senang mempelajari hal baru dan mengembangkan kemampuan
-              melalui pengalaman serta proyek yang dikerjakan.
+              Memiliki pengalaman mengembangkan aplikasi web dan mobile, membuat
+              konten promosi berbasis AI, serta membantu mengelola usaha
+              keluarga. Berbagai pengalaman tersebut menjadi bekal dalam
+              mengembangkan kemampuan teknis, komunikasi, pemecahan masalah, dan
+              adaptasi terhadap berbagai kebutuhan.
             </p>
 
             <div class="flex flex-col sm:flex-row items-stretch gap-4">
               <div class="glass-card flex-1 p-4 rounded-2xl">
-                <span class="block text-xl sm:text-2xl font-bold text-blue-300 mb-1">Manajemen</span>
+                <span
+                  class="block text-xl sm:text-2xl font-bold text-blue-300 mb-1"
+                  >Manajemen</span
+                >
                 <span class="text-xs text-slate-400">Informatika</span>
               </div>
 
               <div class="glass-card flex-1 p-4 rounded-2xl">
-                <span class="block text-xl sm:text-2xl font-bold text-indigo-300 mb-1">Kreatif</span>
+                <span
+                  class="block text-xl sm:text-2xl font-bold text-indigo-300 mb-1"
+                  >Kreatif</span
+                >
                 <span class="text-xs text-slate-400">Teknologi & Konten</span>
               </div>
             </div>
           </div>
 
           <div class="glass-card p-7 sm:p-8 rounded-3xl relative">
-            <div class="absolute -top-3 right-5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white shadow-lg shadow-blue-500/20">
+            <div
+              class="absolute -top-3 right-5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white shadow-lg shadow-blue-500/20"
+            >
               Pendidikan
             </div>
 
-            <h3 class="text-xl font-bold mb-6 text-slate-100">Latar Belakang Akademik</h3>
+            <h3 class="text-xl font-bold mb-6 text-slate-100">
+              Latar Belakang Akademik
+            </h3>
 
             <ul class="space-y-5 text-slate-200">
-              <li class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
-                <div class="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-300">
+              <li
+                class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-4"
+              >
+                <div
+                  class="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-300"
+                >
                   <i class="fa-solid fa-graduation-cap"></i>
                 </div>
                 <div>
-                  <strong class="block text-white">Politeknik Negeri Padang</strong>
-                  <p class="text-sm text-slate-400 mt-1">Manajemen Informatika</p>
-                  <p class="text-sm text-slate-500 mt-1">Lulus September 2026</p>
+                  <strong class="block text-white"
+                    >Politeknik Negeri Padang</strong
+                  >
+                  <p class="text-sm text-slate-400 mt-1">
+                    Manajemen Informatika
+                  </p>
+                  <p class="text-sm text-slate-500 mt-1">
+                    Lulus September 2026
+                  </p>
                 </div>
               </li>
 
-              <li class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-4">
-                <div class="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-300">
+              <li
+                class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 p-4"
+              >
+                <div
+                  class="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-300"
+                >
                   <i class="fa-solid fa-school"></i>
                 </div>
                 <div>
                   <strong class="block text-white">SMAN 2 Lubuk Alung</strong>
-                  <p class="text-sm text-slate-400 mt-1">Pendidikan Menengah Atas</p>
+                  <p class="text-sm text-slate-400 mt-1">
+                    Pendidikan Menengah Atas
+                  </p>
                 </div>
               </li>
             </ul>
@@ -529,97 +725,155 @@
         <div class="text-center mb-12">
           <span class="section-tag mb-6">02. Keahlian</span>
           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
-            Teknologi yang di kuasai
+            Keahlian yang Dimiliki
           </h2>
           <p class="text-slate-300 max-w-xl mx-auto">
-            Beberapa teknologi dan perangkat yang pernah saya gunakan dalam
-            pengembangan aplikasi.
+            Teknologi dan tools yang digunakan dalam pengembangan aplikasi web
+            dan mobile melalui proyek dan pengalaman magang.
           </p>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-blue-400/40 hover:-translate-y-1">
-            <i class="fa-brands fa-php text-4xl text-blue-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-blue-400/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-brands fa-php text-4xl text-blue-400 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">PHP</h3>
-            <span class="text-xs text-slate-400 mt-1 block">Bahasa Pemrograman</span>
+            <span class="text-xs text-slate-400 mt-1 block"
+              >Bahasa Pemrograman</span
+            >
           </div>
 
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-red-400/40 hover:-translate-y-1">
-            <i class="fa-solid fa-layer-group text-4xl text-red-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-red-400/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-solid fa-layer-group text-4xl text-red-400 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">Laravel</h3>
             <span class="text-xs text-slate-400 mt-1 block">Framework PHP</span>
           </div>
 
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-emerald-400/40 hover:-translate-y-1">
-            <i class="fa-brands fa-vuejs text-4xl text-emerald-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-emerald-400/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-brands fa-vuejs text-4xl text-emerald-400 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">Vue.js</h3>
-            <span class="text-xs text-slate-400 mt-1 block">Frontend Framework</span>
+            <span class="text-xs text-slate-400 mt-1 block"
+              >Frontend Framework</span
+            >
           </div>
 
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-yellow-400/40 hover:-translate-y-1">
-            <i class="fa-brands fa-python text-4xl text-yellow-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-yellow-400/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-brands fa-python text-4xl text-yellow-400 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">Python</h3>
-            <span class="text-xs text-slate-400 mt-1 block">Programming Language</span>
+            <span class="text-xs text-slate-400 mt-1 block"
+              >Programming Language</span
+            >
           </div>
 
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-yellow-300/40 hover:-translate-y-1">
-            <i class="fa-brands fa-js text-4xl text-yellow-300 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-yellow-300/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-brands fa-js text-4xl text-yellow-300 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">JavaScript</h3>
-            <span class="text-xs text-slate-400 mt-1 block">Web Development</span>
+            <span class="text-xs text-slate-400 mt-1 block"
+              >Web Development</span
+            >
           </div>
 
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-indigo-400/40 hover:-translate-y-1">
-            <i class="fa-solid fa-database text-4xl text-indigo-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-indigo-400/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-solid fa-database text-4xl text-indigo-400 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">MySQL</h3>
             <span class="text-xs text-slate-400 mt-1 block">Basis Data</span>
           </div>
 
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-slate-200/40 hover:-translate-y-1">
-            <i class="fa-brands fa-github text-4xl text-slate-200 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-slate-200/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-brands fa-github text-4xl text-slate-200 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">Git & GitHub</h3>
-            <span class="text-xs text-slate-400 mt-1 block">Version Control</span>
+            <span class="text-xs text-slate-400 mt-1 block"
+              >Version Control</span
+            >
           </div>
 
-          <div class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-sky-400/40 hover:-translate-y-1">
-            <i class="fa-solid fa-mobile-screen text-4xl text-sky-400 mb-3 group-hover:scale-110 transition inline-block"></i>
+          <div
+            class="skill-card glass-card p-5 rounded-2xl text-center group hover:border-sky-400/40 hover:-translate-y-1"
+          >
+            <i
+              class="fa-solid fa-mobile-screen text-4xl text-sky-400 mb-3 group-hover:scale-110 transition inline-block"
+            ></i>
             <h3 class="font-semibold text-slate-100">Flutter</h3>
-            <span class="text-xs text-slate-400 mt-1 block">Aplikasi Mobile</span>
+            <span class="text-xs text-slate-400 mt-1 block"
+              >Aplikasi Mobile</span
+            >
           </div>
         </div>
       </section>
 
       <!-- EXPERIENCE -->
+
       <section
         id="experience"
         class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
         <span class="section-tag mb-8">03. Pengalaman</span>
+
         <h2 class="text-3xl md:text-4xl font-bold mb-10 text-slate-100">
-          Pengalaman
+          Pengalaman & Aktivitas
         </h2>
 
         <div class="relative border-l-2 border-slate-800 ml-4 pl-6 space-y-8">
+          <!-- Pengalaman Magang -->
           <div class="timeline-card glass-card rounded-2xl p-5 relative">
-            <div class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-950"></div>
+            <div
+              class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-950"
+            ></div>
 
-            <span class="text-xs font-semibold text-blue-300 uppercase tracking-[0.15em]">
+            <h3 class="text-xl font-bold text-slate-100 mt-2">PT Jagoo IT</h3>
+            <span
+              class="text-xs font-semibold text-blue-300 uppercase tracking-[0.15em]"
+            >
               Februari 2026 – Juni 2026
             </span>
 
-            <h3 class="text-xl font-bold text-slate-100 mt-2">PT Jagoo IT</h3>
-            <p class="text-sm text-slate-400 mt-1">Magang – Pengembangan Aplikasi</p>
+            <p class="text-sm text-slate-400 mt-1">
+              Magang – Pengembangan Aplikasi
+            </p>
 
             <p class="text-slate-300 mt-3 leading-relaxed">
-              Terlibat dalam proses pengembangan aplikasi web dengan menggunakan
-              Vue.js dan Flask. Memperoleh pengalaman dalam memahami kebutuhan
-              sistem, pengembangan fitur, serta pengelolaan data aplikasi.
+              Berkontribusi dalam pengembangan aplikasi web menggunakan Vue.js
+              dan Flask, termasuk pengembangan fitur, pengelolaan data, dan
+              penerapan kebutuhan sistem.
             </p>
           </div>
 
+          <!-- Pengalaman Proyek -->
           <div class="timeline-card glass-card rounded-2xl p-5 relative">
-            <div class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"></div>
+            <div
+              class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"
+            ></div>
 
-            <span class="text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]">
+            <span
+              class="text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]"
+            >
               Pengalaman Proyek
             </span>
 
@@ -628,16 +882,21 @@
             </h3>
 
             <p class="text-slate-300 mt-3 leading-relaxed">
-              Mengembangkan proyek aplikasi untuk kebutuhan pengelolaan
-              informasi, transaksi, dan pencatatan data. Terbiasa menggunakan
-              Git dan GitHub untuk membantu pengelolaan kode sumber proyek.
+              Memiliki pengalaman mengembangkan aplikasi web dan mobile dengan
+              menerapkan berbagai teknologi pemrograman serta membangun fitur
+              sesuai kebutuhan sistem.
             </p>
           </div>
 
+          <!-- AI Affiliate Creator -->
           <div class="timeline-card glass-card rounded-2xl p-5 relative">
-            <div class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"></div>
+            <div
+              class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"
+            ></div>
 
-            <span class="text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]">
+            <span
+              class="text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]"
+            >
               Konten Digital
             </span>
 
@@ -646,22 +905,42 @@
             </h3>
 
             <p class="text-slate-300 mt-3 leading-relaxed">
-              Membuat konten promosi berbantuan AI untuk pemasaran produk
-              digital, serta mempelajari strategi affiliate marketing melalui
-              media sosial.
+              Membuat konten promosi berbantuan AI untuk memperkenalkan produk
+              serta memanfaatkan media sosial dalam kegiatan affiliate
+              marketing.
             </p>
 
-            <span class="mt-5 inline-block text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]">
+            <a
+              href="https://www.tiktok.com/@picksy.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-blue-400 hover:text-blue-300 transition"
+            >
+              <i class="fa-brands fa-tiktok text-base"></i>
+              Lihat Akun TikTok
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Usaha Keluarga -->
+          <div class="timeline-card glass-card rounded-2xl p-5 relative">
+            <div
+              class="absolute -left-[31px] top-6 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"
+            ></div>
+
+            <span
+              class="text-xs font-semibold text-slate-300 uppercase tracking-[0.15em]"
+            >
               Usaha Keluarga
             </span>
 
             <h3 class="text-xl font-bold text-slate-100 mt-2">
-              Pengelola Toko Kelontong
+              Membantu Operasional Toko Kelontong
             </h3>
 
             <p class="text-slate-300 mt-3 leading-relaxed">
-              Membantu operasional toko kelontong keluarga, melayani pelanggan,
-              serta mendukung kegiatan penjualan dan pengelolaan barang.
+              Membantu kegiatan operasional toko, melayani pelanggan, serta
+              mendukung penjualan dan penataan barang.
             </p>
           </div>
         </div>
@@ -719,6 +998,38 @@
                   loading="lazy"
                   draggable="false"
                 />
+
+                <img
+                  src="images/perpus-4.png"
+                  alt="Screenshot ketiga sistem informasi perpustakaan"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/perpus5.png"
+                  alt="Screenshot ketiga sistem informasi perpustakaan"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/perpus6.png"
+                  alt="Screenshot ketiga sistem informasi perpustakaan"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/perpus7.png"
+                  alt="Screenshot ketiga sistem informasi perpustakaan"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
               </div>
 
               <button
@@ -765,25 +1076,40 @@
               </h3>
 
               <p class="text-slate-400 text-sm leading-relaxed mb-5">
-                Aplikasi berbasis web untuk membantu pengelolaan data buku,
-                anggota, peminjaman, dan pengembalian buku. Dilengkapi QR Code
-                untuk identifikasi buku dan anggota serta modul hibah buku untuk
-                pencatatan donasi.
+                Proyek Tugas Akhir berupa aplikasi berbasis web untuk membantu
+                pengelolaan data buku, anggota, peminjaman, dan pengembalian
+                buku. Dilengkapi QR Code untuk identifikasi buku dan anggota
+                serta modul hibah buku untuk pencatatan donasi.
               </p>
 
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap items-center gap-2">
                 <span
                   class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
-                  >Eloquent ORM</span
                 >
+                  Eloquent ORM
+                </span>
+
                 <span
                   class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
-                  >QR Code</span
                 >
+                  QR Code
+                </span>
+
                 <span
                   class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
-                  >Sistem Informasi</span
                 >
+                  MySQL
+                </span>
+
+                <a
+                  href="https://sdn32la.pantauiot.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 transition px-2.5 py-1"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Lihat Website
+                </a>
               </div>
             </div>
 
@@ -934,12 +1260,261 @@
               </a>
             </div>
           </article>
+
+          <!-- PROJECT 3: MOVIEDB -->
+          <article
+            class="project-card bg-slate-900/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col hover:border-cyan-500/60 hover:-translate-y-1 transition duration-300 group"
+          >
+            <!-- GALERI SCREENSHOT MOVIEDB -->
+            <div
+              class="gallery-wrapper relative overflow-hidden border-b border-slate-800"
+            >
+              <div
+                id="movie-gallery"
+                class="project-gallery flex flex-nowrap overflow-x-auto snap-x snap-mandatory"
+              >
+                <img
+                  src="images/movie1.png"
+                  alt="Halaman utama MovieDB"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/movie2.png"
+                  alt="Halaman detail film MovieDB"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/movie3.png"
+                  alt="Halaman tambahan MovieDB"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+              </div>
+
+              <button
+                type="button"
+                onclick="moveGallery('movie-gallery', -1)"
+                aria-label="Foto sebelumnya"
+                class="gallery-button left-3"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <button
+                type="button"
+                onclick="moveGallery('movie-gallery', 1)"
+                aria-label="Foto berikutnya"
+                class="gallery-button right-3"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+
+              <span id="movie-counter" class="gallery-counter">1 / 3</span>
+            </div>
+
+            <div class="p-6 flex-1">
+              <div class="flex items-center justify-between mb-5">
+                <i class="fa-solid fa-film text-3xl text-cyan-400"></i>
+
+                <div class="flex flex-wrap justify-end gap-2">
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                  >
+                    Web Application
+                  </span>
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                  >
+                    Movie Database
+                  </span>
+                </div>
+              </div>
+
+              <h3
+                class="text-xl font-bold text-slate-100 mb-3 group-hover:text-cyan-400 transition"
+              >
+                MovieDB — Website Informasi Film
+              </h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed mb-5">
+                Website bertema database film yang dikembangkan sebagai proyek
+                web untuk menampilkan dan mengeksplorasi informasi seputar film.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                >
+                  Web Development
+                </span>
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                >
+                  Movie Database
+                </span>
+              </div>
+            </div>
+
+            <div
+              class="px-6 py-4 bg-slate-950/50 border-t border-slate-800 flex items-center justify-between gap-3"
+            >
+              <span class="text-xs text-slate-500"> Web Application </span>
+
+              <a
+                href="https://github.com/gend-raditya/moviedb"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
+              >
+                <i class="fa-brands fa-github"></i>
+                GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: KEUANGANKU -->
+          <article
+            class="project-card bg-slate-900/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col hover:border-amber-500/60 hover:-translate-y-1 transition duration-300 group"
+          >
+            <!-- GALERI SCREENSHOT KEUANGANKU -->
+            <div
+              class="gallery-wrapper relative overflow-hidden border-b border-slate-800"
+            >
+              <div
+                id="keuangan-gallery"
+                class="project-gallery flex flex-nowrap overflow-x-auto snap-x snap-mandatory"
+              >
+                <img
+                  src="images/keuangan1.png"
+                  alt="Dashboard aplikasi Keuanganku"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/keuangan2.png"
+                  alt="Grafik keuangan Keuanganku"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+
+                <img
+                  src="images/keuangan3.png"
+                  alt="Halaman transaksi Keuanganku"
+                  class="project-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+              </div>
+
+              <button
+                type="button"
+                onclick="moveGallery('keuangan-gallery', -1)"
+                aria-label="Foto sebelumnya"
+                class="gallery-button left-3"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <button
+                type="button"
+                onclick="moveGallery('keuangan-gallery', 1)"
+                aria-label="Foto berikutnya"
+                class="gallery-button right-3"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+
+              <span id="keuangan-counter" class="gallery-counter">1 / 3</span>
+            </div>
+
+            <div class="p-6 flex-1">
+              <div class="flex items-center justify-between mb-5">
+                <i class="fa-solid fa-wallet text-3xl text-amber-400"></i>
+
+                <div class="flex flex-wrap justify-end gap-2">
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                  >
+                    Laravel
+                  </span>
+                  <span
+                    class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md"
+                  >
+                    MySQL
+                  </span>
+                </div>
+              </div>
+
+              <h3
+                class="text-xl font-bold text-slate-100 mb-3 group-hover:text-amber-400 transition"
+              >
+                Keuanganku — Aplikasi Pengelolaan Keuangan
+              </h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed mb-5">
+                Aplikasi berbasis web untuk membantu pencatatan dan pemantauan
+                keuangan. Dilengkapi dashboard untuk menyajikan informasi
+                keuangan agar lebih mudah dipahami.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                >
+                  PHP
+                </span>
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                >
+                  Laravel
+                </span>
+                <span
+                  class="text-xs border border-slate-700 text-slate-400 px-2.5 py-1 rounded-md"
+                >
+                  Chart.js
+                </span>
+              </div>
+            </div>
+
+            <div
+              class="px-6 py-4 bg-slate-950/50 border-t border-slate-800 flex items-center justify-between gap-3"
+            >
+              <span class="text-xs text-slate-500">
+                Finance Web Application
+              </span>
+
+              <a
+                href="https://github.com/gend-raditya/keuanganku_gendri"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
+              >
+                <i class="fa-brands fa-github"></i>
+                GitHub
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
       <!-- SECTION SERTIFIKAT -->
 
-      <section id="sertifikat" class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <section
+        id="sertifikat"
+        class="section-shell py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
+      >
         <div class="max-w-6xl mx-auto">
           <!-- JUDUL SECTION -->
           <div class="mb-12">
